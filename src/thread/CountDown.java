@@ -14,17 +14,19 @@ import java.util.logging.Logger;
  */
 public class CountDown extends Thread{
     int x;
-    public CountDown(){
-        x=1;
+    public CountDown(int y){
+        x=y;
     }
     
     public void run(){
-        int x=1;
+        System.out.print(x);
+   
         while(x>0){
             try {
                 Thread.sleep(1000);
-           System.out.print(x+'\n');
-            x++;
+         
+            x--;
+              System.out.print(x);
             } catch (InterruptedException ex) {
                 Logger.getLogger(CountDown.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -36,4 +38,7 @@ public class CountDown extends Thread{
         x=c;
     
 }
+    public int getX(){
+        return x;
+    }
 }

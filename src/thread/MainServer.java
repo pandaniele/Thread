@@ -17,11 +17,13 @@ public class MainServer {
     public static void main(String[] args) {
     
        // cd.start();
+      
+        
        Server ss=new Server(2000);
-       
+      
       ss.attendi();
        
-      // ss.scrivi();
+       ss.scriviData();
        
       // ss.leggi();
        

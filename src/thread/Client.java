@@ -18,8 +18,11 @@ public class Client {
     Socket client;
      BufferedReader tastiera;
     String stringaRicevuta;
+    CountDown cd;
     public Client(InetAddress a, int porta){
             try {
+                
+                
                   tastiera=new BufferedReader(new InputStreamReader(System.in));
                   
                 client= new Socket(a,porta);
@@ -70,6 +73,22 @@ public class Client {
                System.out.println("CLIENT: ERRORE DI CHIUSURA \n");
             }
            }
-
+      
+  public void leggiData(){
+            try {
+                stringaRicevuta=in.readLine();
+                int intero = Integer.parseInt(stringaRicevuta);
+                cd=new CountDown(intero);
+                cd.start();
+                client.setSoTimeout(intero);
+                 System.out.println("5) CLIENT: IL MESSAGGIO DEL SERVER E' : " +stringaRicevuta+"\n");
+                 
+            }catch (IOException ex) {
+               System.out.println(" CLIENT: ERRORE DI RICEVIMENTO"+ "\n");
+            }
+            //NON SI CHIUDE IL SERVER IN GENERALE?
+        
+              
+    }
     
 }

@@ -24,8 +24,8 @@ public class MainClient {
             Client cc=new Client(InetAddress.getLocalHost(), 2000);
             
         
-          //  cc.leggi();
-            
+            cc.leggiData();
+            cc.scrivi();
            //     cc.scrivi();
               
                //     cc.leggi();
