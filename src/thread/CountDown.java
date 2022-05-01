@@ -18,15 +18,16 @@ public class CountDown extends Thread{
         x=y;
     }
     
+    @Override
     public void run(){
         System.out.print(x);
    
         while(x>0){
             try {
-                Thread.sleep(1000);
+               sleep(1000);
          
             x--;
-              System.out.print(x);
+              System.out.print(x+"\n");
             } catch (InterruptedException ex) {
                 Logger.getLogger(CountDown.class.getName()).log(Level.SEVERE, null, ex);
             }

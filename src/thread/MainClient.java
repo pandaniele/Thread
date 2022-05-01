@@ -26,12 +26,14 @@ public class MainClient {
         
             cc.leggiData();
             cc.scrivi();
+            //   cc.chiudi();
            //     cc.scrivi();
               
                //     cc.leggi();
             
                 
-         //   cc.chiudi();
+           
+               
         } catch (UnknownHostException ex) {
             Logger.getLogger(MainClient.class.getName()).log(Level.SEVERE, null, ex);
         }

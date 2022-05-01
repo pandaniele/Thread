@@ -21,16 +21,17 @@ public class MainServer {
         
        Server ss=new Server(2000);
       
-      ss.attendi();
+    
+     
+   
        
-       ss.scriviData();
-       
+     
       // ss.leggi();
        
        // ss.scrivi();
         
        
-//       ss.chiudiConnessione();
+     //ss.chiudiConnessione();
        
      //  ss.chiudiServer();
        
