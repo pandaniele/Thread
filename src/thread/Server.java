@@ -18,11 +18,7 @@ import java.util.Date;
 
 public class Server {
        //  DataOutputStream out;
-         BufferedWriter bf;
-         BufferedReader in;
-            
-                 BufferedReader tastiera;
-                 String stringaRicevuta;
+
                  
                   ServerSocket serverSocket;
                     Socket socket;
@@ -43,8 +39,15 @@ public class Server {
          int x=1;
          while(x!=0){
                 socket=serverSocket.accept();
-                Threa cl=new Threa(socket, cd);
-                    cl.start();
+                System.out.print("\n NUMERO S-CLIENT   "+socket.getPort()+"\n");
+              /*  Threa cl=new Threa(socket, cd);
+                    cl.start();*/
+               ClientHandler clientSock
+                    = new ClientHandler(socket, cd);
+                                        //run
+             
+               Threa th=new Threa(clientSock);
+                       th.start();
                 
          }
        

@@ -19,6 +19,7 @@ public class Client {
      BufferedReader tastiera;
     String stringaRicevuta;
     CountDown cd;
+    
     public Client(InetAddress a, int porta){
             try {
                 
