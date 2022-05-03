@@ -44,10 +44,10 @@ public class Server {
                     cl.start();*/
                ClientHandler clientSock
                     = new ClientHandler(socket, cd);
-                                        //run
+                                        //runnable
              
-               Threa th=new Threa(clientSock);
-                       th.start();
+               Thread th=new Thread(clientSock);
+                       th.start();//richiama metodo RUN della classe Runnable che devo impkmemtare
                 
          }
        
